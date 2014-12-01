@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="https://cdn.firebase.com/js/client/2.0.5/firebase.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/counter.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<title>Poof</title>
 </head>
 <body>
 
-	<textarea class="poofContent"></textarea>
-	<button type="button" onclick="pushCharNum()">Poof</button>	
+	<section id="first">
+		<textarea class="poofContent"></textarea>
+		<button type="button" onclick="pushCharNum(); swapSections()">Poof</button>	
 
-	<br><br><br><br><br>
-	
-	<p>How would you like to destroy your message?</p>
-	<br>
-	<textarea class="destroyAction"></textarea>
-	<button type="button" onclick="destroyAction()">Submit</button>
-
-	<br><br><br><br><br>
-
-	<section>
-		<div id="counter"></div>
 	</section>
 
+	<section id="second">
+		<div id="counter"></div>
+		
+		<p>How would you like to destroy your message?</p>
+		<br>
+		<textarea class="destroyAction"></textarea>
+		<button type="button" onclick="destroyAction()">Submit</button>
+
+		<br><br>
+
+		<a href="https://twitter.com/intent/tweet?button_hashtag=pooooof" class="twitter-hashtag-button" data-size="large" data-related="pooooof_it" data-url="http://pooooof.com">Tweet #pooooof</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</section>
 
 </body>
 </html>

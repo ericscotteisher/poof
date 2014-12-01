@@ -1,4 +1,5 @@
 var fbRef = new Firebase("https://poof.firebaseio.com/");
+var counterNum;
 
 // push number of characters in message to db
 var charNumRef = fbRef.child("charNum");
@@ -18,11 +19,21 @@ function destroyAction(){
 	});
 };
 
-// Pull number of poofs from the database
+// Pull number of poofs from the database to display in counter
 var counterRef = new Firebase("https://poof.firebaseio.com/charNum");
 counterRef.on("value", function(snapshot) {
 	counterNum = Object.keys(snapshot.val()).length;
-	document.getElementById('counter').innerHTML = counterNum;
 	}, function (errorObject) {
 	  console.log("The read failed: " + errorObject.code);
 	});
+
+// Hide first section and display second section on poof
+function swapSections(){
+	$('#first').hide();
+	$('#second').fadeIn();
+	document.getElementById('counter').innerHTML = counterNum;
+	$("#counter").counter({
+	  countFrom: 0,
+	  countTo: counterNum,        // count to this number, default: 0
+	});
+};

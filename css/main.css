@@ -4,11 +4,18 @@ html {
 }
 
 body {
-	margin-top: 25%;
 	text-align: center;
 }
 
 button {
 	font-size: 30px;
 
+}
+
+#second {
+	display: none;
+}
+
+#counter {
+	font-size: 100px
 }
