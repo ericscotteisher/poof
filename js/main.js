@@ -17,3 +17,12 @@ function destroyAction(){
 		Destroy_Action: destroyAction
 	});
 };
+
+// Pull number of poofs from the database
+var counterRef = new Firebase("https://poof.firebaseio.com/charNum");
+counterRef.on("value", function(snapshot) {
+	counterNum = Object.keys(snapshot.val()).length;
+	document.getElementById('counter').innerHTML = counterNum;
+	}, function (errorObject) {
+	  console.log("The read failed: " + errorObject.code);
+	});
