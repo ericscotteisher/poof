@@ -19,3 +19,8 @@ button {
 #counter {
 	font-size: 100px
 }
+
+#destroyMessage {
+	display: none;
+	font-size: 60px
+}

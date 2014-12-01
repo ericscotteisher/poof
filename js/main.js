@@ -17,6 +17,10 @@ function destroyAction(){
 	destroyActionRef.push({
 		Destroy_Action: destroyAction
 	});
+	message = destroyAction + ' -- Hell yea.'
+	$('#destroyRequest').hide();
+	document.getElementById('destroyMessage').innerHTML = message;
+	$('#destroyMessage').fadeIn();
 };
 
 // Pull number of poofs from the database to display in counter
