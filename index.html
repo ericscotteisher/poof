@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="js/main.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script src="https://cdn.firebase.com/js/client/2.0.5/firebase.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<title>Poof</title>
 </head>
 <body>
-	<button type="button" onclick="poof()">Poof</button>
+
+	<textarea class="poofContent"></textarea>
+	<button type="button" onclick="pushCharNum()">Poof</button>	
+
+	<br><br><br><br><br>
+	
+	<p>How would you like to destroy your message?</p>
+	<br>
+	<textarea class="destroyAction"></textarea>
+	<button type="button" onclick="destroyAction()">Submit</button>
+
+
+
+
 </body>
 </html>
